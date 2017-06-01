@@ -19,7 +19,7 @@ use React\Dns\Resolver\Resolver;
 use React\EventLoop\LoopInterface;
 use React\HttpClient\Client as HttpClient;
 use React\Promise\Deferred;
-use React\SocketClient\TimeoutConnector;
+use React\Socket\TimeoutConnector;
 use React\Stream\Stream;
 use ReflectionObject;
 use React\Stream\ReadableStreamInterface;
