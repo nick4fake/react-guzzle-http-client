@@ -1,5 +1,5 @@
 {
-    "name": "wyrihaximus/react-guzzle-http-client",
+    "name": "nick4fake/react-guzzle-http-client",
     "description": "Asynchronous GuzzleRing adapter powered by react/http-client",
     "license": "MIT",
     "authors": [
