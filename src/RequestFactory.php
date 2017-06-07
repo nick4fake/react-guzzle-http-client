@@ -19,8 +19,8 @@ use React\Dns\Resolver\Resolver;
 use React\EventLoop\LoopInterface;
 use React\HttpClient\Client as HttpClient;
 use React\Promise\Deferred;
-use React\SocketClient\TimeoutConnector;
-use React\Stream\Stream;
+use React\Socket\TimeoutConnector;
+use React\Stream\WritableResourceStream;
 use ReflectionObject;
 use React\Stream\ReadableStreamInterface;
 
@@ -81,7 +81,7 @@ class RequestFactory
         $deferred = new Deferred();
         $writeStream = fopen($target, 'w');
         stream_set_blocking($writeStream, 0);
-        $saveToStream = new Stream($writeStream, $loop);
+        $saveToStream = new WritableResourceStream($writeStream, $loop);
 
         $saveToStream->on(
             'end',
